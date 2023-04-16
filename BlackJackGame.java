@@ -15,7 +15,7 @@ public class BlackJackGame extends Application {
      final int NUMCARDS = 52;
      final int CARDSPERSUIT = 13;
 
-     final String FILE_PREFIX = "file:///C:./images/";
+     final String FILE_PREFIX = "file:X:\\USF Instructional Tech MS Courses\\COP2805C\\JavaPrograms\\SingletaryComplete\\cop2805cMod11GPASolution\\images\\";
     
      private final int SPACING = 20;
      private final String TITLE = "Blackjack";
@@ -134,12 +134,12 @@ public class BlackJackGame extends Application {
      void getNewCardsAndRecalc() { // get new cards, recalculate
          int index = blackJackList.get(0).getFileIndex();
          card1 = new ImageView(FILE_PREFIX + index + ".png");
-         //System.out.println("new card1: " + FILE_PREFIX + index + ".png");
+         System.out.println("new card1: " + FILE_PREFIX + index + ".png");
          totalPoints = getBlackJackFaceValue(index);
         
          index = blackJackList.get(1).getFileIndex();
          card2 = new ImageView(FILE_PREFIX + index + ".png");
-         //System.out.println("new card2: " + FILE_PREFIX + index + ".png");
+         System.out.println("new card2: " + FILE_PREFIX + index + ".png");
          totalPoints += getBlackJackFaceValue(index);
         
          if (totalPoints == 22) // exception: two Aces
